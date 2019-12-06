@@ -5,8 +5,11 @@
     git clone https://github.com/hlohaus/shopware-subdir-project.git .
     
 2.) Copy database
+
 3.) Copy .env to private/
+
 4.) Change database name in .env
+
 5.) Link folders
 
     ln -s ../bundels/ .
