@@ -1,3 +1,8 @@
+# Shopware 6 - Subdir Project
+
+Install Shopware in a sub directory. It use same code, but no the same database.
+So you can test plugins.
+
 1.) Install subdir project
 
     mkdir public/you_subdir
