@@ -5,7 +5,7 @@ So you can test plugins.
 
 1.) Install subdir project
 
-    mkdir public/you_subdir
+    mkdir public/your_subdir
     cd public/your_subdir
     git clone https://github.com/hlohaus/shopware-subdir-project.git .
     
