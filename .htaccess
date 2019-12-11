@@ -17,8 +17,6 @@ DirectoryIndex index.php
     RewriteCond %{ENV:REDIRECT_STATUS} ^$
     RewriteRule ^index\.php(?:/(.*)|$) %{ENV:BASE}/$1 [R=301,L]
 
-    RewriteCond %{REQUEST_URI} !(\/(theme|media|bundles|js|fonts|sitemap|thumbnnail)\/)
-
     # If the requested filename exists, simply serve it.
     # We only want to let Apache serve files and not directories.
     RewriteCond %{REQUEST_FILENAME} -f
