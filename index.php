@@ -40,7 +40,20 @@ if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? $_ENV['TRUSTED_HOSTS'] ?? false
     Request::setTrustedHosts(explode(',', $trustedHosts));
 }
 
-if (class_exists('Shopware\Core\HttpKernel')) {
+if (class_exists('Shopware\Production\HttpKerne')) {
+    $request = Request::createFromGlobals();
+
+    $kernel = new \Shopware\Production\HttpKernel($appEnv, $debug, $classLoader);
+    $result = $kernel->handle($request);
+
+    $result->getResponse()->send();
+
+    $kernel->terminate($result->getRequest(), $result->getResponse());
+
+    return;
+}
+
+if (class_exists('Shopware\Development\HttpKernel')) {
     $request = Request::createFromGlobals();
 
     $kernel = new \Shopware\Development\HttpKernel($appEnv, $debug, $classLoader);
