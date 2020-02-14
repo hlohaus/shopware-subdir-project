@@ -17,7 +17,7 @@ So you can test plugins.
 
 5.) Link folders
 
-    ln -s ../bundels/ .
+    ln -s ../bundles/ .
     ln -s ../media/ .
     ln -s ../theme/ .
     ln -s ../thumbnail/ .
